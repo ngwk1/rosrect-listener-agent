@@ -39,7 +39,7 @@ before_install:
   - pip install --user cpp-coveralls
 
 install:
-  - git clone https://github.com/cognicept-admin/rosrect-ecs-api-server.git -b travis-ci 
+  - git clone https://github.com/cognicept-admin/rosrect-ecs-api-server.git -b master 
   - git clone https://github.com/ros-industrial/industrial_ci.git .industrial_ci -b master
 
 before_script:
