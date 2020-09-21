@@ -3,6 +3,13 @@ services:
   - docker
 
 env:
+  global: # global settings for all jobs
+    - CCACHE_DIR=$HOME/.ccache # enables C/C++ caching in industrial_ci
+    - export ECS_API=http://127.0.0.1:8000
+    - export AGENT_POST_API=https://postman-echo.com
+    - echo "Checking ECS API Val"
+    - echo $ECS_API
+
   matrix:
     - ROS_DISTRO="melodic"
 
